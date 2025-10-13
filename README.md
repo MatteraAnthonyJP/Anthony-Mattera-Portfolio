@@ -21,7 +21,7 @@ A Educational game made as a capstone project for a musuem in Carter Lake, GA. T
 
 **Role in Development**: Data Validation, Gameplay logic.
   
-I was mainly in charge of finding and loading the actual star data, as well as adding the gameplay functionality of actually drawing between the stars. I also had to personally validate each and every connection between stars needed in order to form the constelations
+I was mainly in charge of finding and loading the actual star data from a Bytes file that was publiclly avalible from Yale, as well as adding the gameplay functionality of actually drawing between the stars. I also had to personally validate each and every connection between stars needed in order to form the constelations. 
 
 **Tools Used**
 Unity, C#, JSON
