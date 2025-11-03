@@ -26,7 +26,10 @@ An educational game created as a capstone project for a museum in Carter Lake, G
 **Role in Development**: Data Validation, Gameplay logic.
 
 **In-Depth Description of role**
-Responsible for loading star data from a publicly available binary file, implementing the gameplay functionality for connecting stars, and manually validating all connections to accurately form constellations.
+Responsible for loading star data from a publicly available binary file, implementing the gameplay functionality for connecting stars, and manually validating all connections to accurately form constellations. 
+
+**Demo**
+https://youtu.be/GGBUJkl4HzU
 
 **Tools Used**
 Unity, C#, json reading
@@ -44,6 +47,9 @@ Gameplay, UI, XR Interaction toolkit,
 
 **In-Depth Description of role**
 Developed a VR tech demo featuring procedural mesh generation with Triangle.Net, a save/load system, and custom VR interactions including holsters, UI, offset grabs, dials, levers, and locomotion mechanics.
+
+**Demo**
+Coming Soon
 
 **Tools Used**
 Unity, C#, XR Interaction Toolkit, Shader Graph, Triangle.Net
