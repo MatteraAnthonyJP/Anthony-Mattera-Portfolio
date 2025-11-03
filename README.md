@@ -30,7 +30,7 @@ Responsible for loading star data from a publicly available binary file, impleme
 Unity, C#, json reading
 
 
-## Publicly UnAvailable Projects
+## Publicly Unavailable Projects
 
 ### Virtual Reality Blacksmithing Tech Demo
 A VR tech Demo made to showcase desigining meshes in real-time. 
