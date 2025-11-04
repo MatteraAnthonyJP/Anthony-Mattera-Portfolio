@@ -36,7 +36,10 @@ Responsible for loading star data from a publicly available binary file, impleme
 **Demo Video**
 [![Watch the video](https://img.youtube.com/vi/GGBUJkl4HzU/hqdefault.jpg)](https://www.youtube.com/watch?v=GGBUJkl4HzU)
 
-Play the Game: File iz zipped .exe
+Play the Game: 
+[Download GEARS Demo](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Drawing_The_Night_Sky)
+
+***File iz zipped .exe***
 
 
 **Tools Used**
