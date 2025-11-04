@@ -20,8 +20,9 @@ Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
 **Demo Video**
 [![Watch the video](https://img.youtube.com/vi/sFGd83fBjbc/hqdefault.jpg)](https://www.youtube.com/watch?v=sFGd83fBjbc)
 
-Play the Game: File is APK
+Play the Game: 
 [Download GEARS Demo]([https://github.com/username/repo/releases/latest](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Gears))
+***File is an APK***
 
 ### Educational Project - Drawing The Night Sky
 An educational game created as a capstone project for a museum in Carter Lake, GA. The game helps children learn to identify constellations by connecting stars in the night sky using real star data from the Yale Bright Star Catalogue.
