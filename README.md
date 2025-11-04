@@ -21,7 +21,8 @@ Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
 [![Watch the video](https://img.youtube.com/vi/sFGd83fBjbc/hqdefault.jpg)](https://www.youtube.com/watch?v=sFGd83fBjbc)
 
 Play the Game: 
-[Download GEARS Demo]([https://github.com/username/repo/releases/latest](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Gears))
+[Download GEARS Demo](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Gears)
+
 ***File is an APK***
 
 ### Educational Project - Drawing The Night Sky
