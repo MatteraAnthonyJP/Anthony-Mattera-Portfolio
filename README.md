@@ -17,7 +17,7 @@ Developed from start to finish, this mobile AR hybrid game includes a save/load 
 **Tools Used**
 Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
 
-**Demo**
+**Demo Video**
 [![Watch the video](https://img.youtube.com/vi/sFGd83fBjbc/hqdefault.jpg)](https://www.youtube.com/watch?v=sFGd83fBjbc)
 
 ### Educational Project - Drawing The Night Sky
@@ -28,8 +28,8 @@ An educational game created as a capstone project for a museum in Carter Lake, G
 **In-Depth Description of role**
 Responsible for loading star data from a publicly available binary file, implementing the gameplay functionality for connecting stars, and manually validating all connections to accurately form constellations. 
 
-**Demo**
-https://youtu.be/GGBUJkl4HzU
+**Demo Video**
+[![Watch the video](https://img.youtube.com/vi/GGBUJkl4HzU/hqdefault.jpg)](https://www.youtube.com/watch?v=GGBUJkl4HzU)
 
 **Tools Used**
 Unity, C#, json reading
