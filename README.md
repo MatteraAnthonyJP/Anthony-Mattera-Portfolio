@@ -57,7 +57,7 @@ Gameplay, UI, XR Interaction toolkit,
 **Note:** Solo project.
 
 **In-Depth Description of role**
-Developed a VR tech demo featuring procedural mesh generation with Triangle.Net, a save/load system, and custom VR interactions including holsters, UI, offset grabs, dials, levers, and locomotion mechanics.
+Developed a VR tech demo featuring data powered runtime mesh generation using Triangle.Net, a save/load system, and custom VR interactions including holsters, UI, offset grabs, dials, levers, and locomotion mechanics.
 
 **Demo**
 Coming Soon
