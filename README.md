@@ -21,7 +21,7 @@ Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
 [![Watch the video](https://img.youtube.com/vi/sFGd83fBjbc/hqdefault.jpg)](https://www.youtube.com/watch?v=sFGd83fBjbc)
 
 Play the Game: 
-[Download GEARS Demo](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Gears)
+[Download GEARS](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Gears)
 
 ***File is an APK***
 
@@ -37,7 +37,7 @@ Responsible for loading star data from a publicly available binary file, impleme
 [![Watch the video](https://img.youtube.com/vi/GGBUJkl4HzU/hqdefault.jpg)](https://www.youtube.com/watch?v=GGBUJkl4HzU)
 
 Play the Game: 
-[Download GEARS Demo](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Drawing_The_Night_Sky)
+[Download Drawing The Night Sky](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Drawing_The_Night_Sky)
 
 ***File iz zipped .exe***
 
