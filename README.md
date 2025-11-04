@@ -39,7 +39,7 @@ Responsible for loading star data from a publicly available binary file, impleme
 Play the Game: 
 [Download Drawing The Night Sky](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Drawing_The_Night_Sky)
 
-***File iz zipped .exe***
+***File is zipped .exe***
 
 
 **Tools Used**
@@ -49,7 +49,7 @@ Unity, C#, json reading
 ## Currently Unavailable Projects
 
 ### Virtual Reality Blacksmithing Tech Demo
-A VR tech Demo made to showcase desigining meshes in real-time. 
+A VR tech Demo made to showcase designing meshes in real-time. 
 
 **Role in Development**: Designer and Developer-
 Gameplay, UI, XR Interaction toolkit,
@@ -57,13 +57,12 @@ Gameplay, UI, XR Interaction toolkit,
 **Note:** Solo project.
 
 **In-Depth Description of role**
-Developed a VR tech demo featuring data powered runtime mesh generation using Triangle.Net, a save/load system, 
-As Well as Custom VR interactions including holsters, UI, offset grabs, dials, levers, and locomotion mechanics.
+Developed a VR tech demo featuring data powered runtime mesh generation using Triangle.Net, a save/load system. 
+As well as Custom VR interactions including holsters, UI, offset grabs, dials, levers, and locomotion mechanics.
 
 **Demo**
 Coming Soon
 
 **Tools Used**
 Unity, C#, XR Interaction Toolkit, Shader Graph, Triangle.Net
-
 
