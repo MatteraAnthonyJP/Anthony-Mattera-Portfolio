@@ -18,7 +18,7 @@ Developed from start to finish, this mobile AR hybrid game includes a save/load 
 Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
 
 **Demo**
-https://youtu.be/sFGd83fBjbc
+[![Watch the video](https://img.youtube.com/vi/sFGd83fBjbc/hqdefault.jpg)](https://www.youtube.com/watch?v=sFGd83fBjbc)
 
 ### Educational Project - Drawing The Night Sky
 An educational game created as a capstone project for a museum in Carter Lake, GA. The game helps children learn to identify constellations by connecting stars in the night sky using real star data from the Yale Bright Star Catalogue.
