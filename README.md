@@ -62,6 +62,7 @@ As well as Custom VR interactions including holsters, UI, offset grabs, dials, l
 
 **Demo**
 Coming Soon
+***Currently reworking and refactoring core systems to improve performance and modernize for newer versions of the XR Interaction Toolkit.***
 
 **Tools Used**
 Unity, C#, XR Interaction Toolkit, Shader Graph, Triangle.Net
