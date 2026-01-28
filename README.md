@@ -52,12 +52,12 @@ Unity, C#, json reading
 A VR tech Demo made to showcase designing meshes in real-time. 
 
 **Role in Development**: Designer and Developer-
-Gameplay, UI, XR Interaction toolkit,
+Gameplay, UI, XR Interaction toolkit, Custom Triangulation
 
 **Note:** Solo project.
 
 **In-Depth Description of role**
-Developed a VR tech demo featuring data powered runtime mesh generation using Triangle.Net, a save/load system. 
+Developed a VR tech demo featuring data powered runtime mesh generation, a save/load system. 
 As well as Custom VR interactions including holsters, UI, offset grabs, dials, levers, and locomotion mechanics.
 
 **Demo**
@@ -65,5 +65,5 @@ Coming Soon
 ***Currently reworking and refactoring core systems to improve performance and modernize for newer versions of the XR Interaction Toolkit.***
 
 **Tools Used**
-Unity, C#, XR Interaction Toolkit, Shader Graph, Triangle.Net
+Unity, C#, XR Interaction Toolkit, Shader Graph
 
