@@ -63,6 +63,7 @@ As well as Custom VR interactions including holsters, UI, offset grabs, dials, l
 **Demo**
 Coming Soon
 ***Currently reworking and refactoring core systems to improve performance and modernize for newer versions of the XR Interaction Toolkit.***
+***Though as of 1/28/2026 it is functional in all the ways described. I am in the process of adding A shop system so that the demo can truly be considered complete, and so that the inital gameplay loop is also complete***
 
 **Tools Used**
 Unity, C#, XR Interaction Toolkit, Shader Graph
