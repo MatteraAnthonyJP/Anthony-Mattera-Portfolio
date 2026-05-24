@@ -46,24 +46,27 @@ Play the Game:
 Unity, C#, json reading
 
 
-## Currently Unavailable Projects
-
+## Private Projects
+ 
 ### Virtual Reality Blacksmithing Tech Demo
 A VR tech Demo made to showcase designing meshes in real-time. 
 
 **Role in Development**: Designer and Developer-
-Gameplay, UI, XR Interaction toolkit, Custom Triangulation
+Gameplay, UI, XR Interaction toolkit, 
 
 **Note:** Solo project.
 
 **In-Depth Description of role**
-Developed a VR tech demo featuring data powered runtime mesh generation, a save/load system. 
-As well as Custom VR interactions including holsters, UI, offset grabs, dials, levers, and locomotion mechanics.
+Developed a VR tech demo
+* data powered runtime mesh generation.
+* An axis restricted multi-hand grab system
+* A custom abstraction layer for physical controller button interactions for held object-dependent controls.
+* A custom Shop system for a full gameplay loop
+* As well as basic VR interactions including holsters, grabs, dials, levers, and locomotion mechanics.
 
 **Demo**
 Coming Soon
-***Currently reworking and refactoring core systems to improve performance and modernize for newer versions of the XR Interaction Toolkit.***
-***Though as of 1/28/2026 it is functional in all the ways described. I am in the process of adding A shop system so that the demo can truly be considered complete, and so that the inital gameplay loop is also complete***
+***Demo is now complete. As of 5/24/2026, multiple iterations have now been completed, and now the focus has been moved towards visual polish before public release. This project includes many moving parts and features. As such, in its current state, it is more accurately a tech demo. Email me at MatteraAnthonyjp@gmail.com if you are interested in hearing about/ seeing more about it at this point***
 
 **Tools Used**
 Unity, C#, XR Interaction Toolkit, Shader Graph
