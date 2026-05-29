@@ -75,7 +75,7 @@ A Video of the Demo can be seen Below
 
 **Demo Video**
 
-[![Watch the video](https://img.youtube.com/vi/7_O5xNfPPn0/hqdefault.jpg)]([https://youtu.be/7_O5xNfPPn0]) 
+[![Watch Here](https://img.youtube.com/vi/7_O5xNfPPn0/hqdefault.jpg)](https://www.youtube.com/watch?v=7_O5xNfPPn0)
 
 **Tools Used**
 
