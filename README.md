@@ -65,9 +65,20 @@ Developed a VR tech demo
 * As well as basic VR interactions including holsters, grabs, dials, levers, and locomotion mechanics.
 
 **Demo**
-Coming Soon
-***Demo is now complete. As of 5/24/2026, multiple iterations have now been completed, and now the focus has been moved towards visual polish before public release. This project includes many moving parts and features. As such, in its current state, it is more accurately a tech demo. Email me at MatteraAnthonyjp@gmail.com if you are interested in hearing about/ seeing more about it at this point***
+
+Playable Demo Coming Soon
+
+
+***Demo is now complete. As of 5/24/2026, multiple iterations have now been completed, and now the focus has been moved towards visual polish before public release. This project includes many moving parts and features. As such, in its current state, it is more accurately a tech demo.***
+
+A Video of the Demo can be seen Below
+
+**Demo Video**
+
+[![Watch the video](https://img.youtube.com/vi/7_O5xNfPPn0/hqdefault.jpg)]([https://youtu.be/7_O5xNfPPn0]) 
 
 **Tools Used**
+
 Unity, C#, XR Interaction Toolkit, Shader Graph
+
 
