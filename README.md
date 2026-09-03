@@ -14,6 +14,8 @@ Gameplay, UI, AR Foundation
 **In-Depth Description of role**
 Developed from start to finish, this mobile AR hybrid game includes a save/load system, custom shaders, and an experience that can adapt between augmented reality and traditional flat-screen modes during gameplay
 
+![Alternative Text Description](images/o.gif)
+
 **Tools Used**
 Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
 
