@@ -14,7 +14,7 @@ Gameplay, UI, AR Foundation
 **In-Depth Description of role**
 Developed from start to finish, this mobile AR hybrid game includes a save/load system, custom shaders, and an experience that can adapt between augmented reality and traditional flat-screen modes during gameplay
 
-<img src="Images/o.gif" alt="Short GIF of the game running the BFS Algo" width="500" />
+<img src="Images/o.gif" alt="Short GIF of the game running the BFS Algo" width="300" />
 
 **Tools Used**
 Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
