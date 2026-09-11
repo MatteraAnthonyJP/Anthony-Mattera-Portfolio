@@ -2,8 +2,9 @@
 I am a Game Developer specializing in Unity, focusing on technical complex projects such as VR/AR. I enjoy creating projects that stand out as unique compared to current market offerings. I’m passionate about collaborating with others and pushing the boundaries of game development into innovative and captivating experiences.
 ---
 
-If you would like to see jump straight to some of the problems and solutions I've encountered during projects you can check [here](#problems-solved-during-projects). or conversely you can just scroll down 
+If you would like to see jump straight to some of the problems and solutions I've encountered during projects you can check **[here](#problems-solved-during-projects)**. or conversely you can just scroll down 
 
+# Current Showcased Projects
 ## AR Puzzle Game: GEARS
 <table>
 <tr>
@@ -40,7 +41,11 @@ Play the Game: [Download GEARS](https://github.com/MatteraAnthonyJP/Anthony-Matt
 
 
 ## Virtual Reality Blacksmithing Tech Demo
-A VR tech Demo made to showcase designing meshes in real-time. 
+
+<table>
+<tr>
+    <td valign="top" width="60%">
+      <p>       A VR tech Demo made to showcase designing meshes in real-time. 
 
 **Role in Development**: Designer and Developer-
 Gameplay, UI, XR Interaction toolkit, 
@@ -55,21 +60,32 @@ Developed a VR tech demo
 * A custom Shop system for a full gameplay loop
 * As well as basic VR interactions including holsters, grabs, dials, levers, and locomotion mechanics.
 
-**Demo** For right now demo has to be individually requested
-
-
-A Video of the Demo can be seen Below
-
-**Demo Video**
-
-[![Watch Here](https://img.youtube.com/vi/7_O5xNfPPn0/hqdefault.jpg)](https://www.youtube.com/watch?v=7_O5xNfPPn0)
+**Demo:** For right now demo has to be individually requested
 
 **Tools Used**
 
 Unity, C#, XR Interaction Toolkit, Shader Graph
 
+</p>
+    </td>
+    <td align="center" valign="top" width="40%">
+      <p><b>**Demo Video**</b></p>
+      <a href="https://www.youtube.com/watch?v=7_O5xNfPPn0">
+        <img src="https://img.youtube.com/vi/7_O5xNfPPn0/hqdefault.jpg" alt="Video Thumbnail" width="100%">
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+
 ## Educational Project - Drawing The Night Sky
-An educational game created as a capstone project for a museum in Carter Lake, GA. The game helps children learn to identify constellations by connecting stars in the night sky using real star data from the Yale Bright Star Catalogue.
+
+
+<table>
+<tr>
+    <td valign="top" width="60%">
+      <p>      An educational game created as a capstone project for a museum in Carter Lake, GA. The game helps children learn to identify constellations by connecting stars in the night sky using real star data from the Yale Bright Star Catalogue.
 
 **Role in Development**: Data Validation, Gameplay logic.
 
@@ -78,9 +94,6 @@ Responsible for loading star data from a publicly available binary file, impleme
 
 **Demo Video**
 
-[![Watch the video](https://img.youtube.com/vi/GGBUJkl4HzU/hqdefault.jpg)](https://www.youtube.com/watch?v=GGBUJkl4HzU)
-
-Play the Game: [Download Drawing The Night Sky](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Drawing_The_Night_Sky)
 
 ***File is zipped .exe***
 
@@ -88,6 +101,21 @@ Play the Game: [Download Drawing The Night Sky](https://github.com/MatteraAnthon
 **Tools Used**
 Unity, C#, json reading
 
+
+Unity, C#, XR Interaction Toolkit, Shader Graph
+
+Play the Game: [Download Drawing The Night Sky](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Drawing_The_Night_Sky)
+
+</p>
+    </td>
+    <td align="center" valign="top" width="40%">
+      <p><b>**Demo Video**</b></p>
+      <a href="https://www.youtube.com/watch?v=GGBUJkl4HzU">
+        <img src="https://img.youtube.com/vi/GGBUJkl4HzU/hqdefault.jpg" alt="Video Thumbnail" width="100%">
+      </a>
+    </td>
+  </tr>
+</table>
  
 
 
