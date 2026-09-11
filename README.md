@@ -117,7 +117,7 @@ Before jumping into the massive amount of things I want to talk about I just wan
 ### Problem 1) Mesh Deformation Strategies
 So This Project was actually something I have had planned out and just didn't find the time till recently to make, but one of the first issues I encountered was with the idea. I want to make a blacksmithing, but how can I do that without having massive calculations that tank performance?
 
-### Solution) 
+### Solution 1) 
 What Ive seen in the field is a large amount of designs that have tradeoffs and honestly they usually hurt the end user and the capabilities of the final product more than they are worth. So lets talk first about what I **didn't do**. 
 1) I didn't deform a mesh with a large amount of pre-made extra vertices. This would tank performance make it very difficult to do physics calculations, and guess what it would make most of the mesh data go to waste. Not to mention in VR this is very difficult to Make fun and its too complex for most people to enjoy.
 2) I didn't make the deform purely visual using bump maps. This would be better for the performance, but if the ultimate goal was to have the output be usable in physics simulations this would be terrible
@@ -133,7 +133,25 @@ Advantages of this approach
 
    
 ### Problem 2) VR Controller Buttons
-So this problem stems from how The XR toolkit (Unity's VR Solution) Is built. Its most likely easiest to explain after showing a picture of what a vr controller usually looks like button wise
+So this problem stems from how The XR toolkit (Unity's VR Solution) Is built. Its most likely easiest to explain after showing a picture of what a VR controller usually looks like button wise 
+
+<img src="Images/vr con.png" alt="photo of a quest 3 controller" width="300" />
+
+
+I want you to mainly focus on the X/Y buttons. So heres what is actually a problem. When you make something for VR opposed to other mediums you tend to need alot more interactions entirely dependent on the object you have held in your hand. The easiest example of such is a gun. First of all if you aren't directly holding a gun you wouldn't want to have control over a gun, but at the same time when you are holding it  You might have a trigger, but you could also have buttons like a safety or a magazine release. Unity's XR toolkit doesn't have a native way to give interactions to those Extra buttons IE X/Y built into it. So in a sense out of box theirs no way to make object dependent controls for these non Trigger based buttons
+
+### Solution 2)
+
+This solution was highly straight forward actually. I created an event manager for each hand that was controlled based off predetermined buttons and button configurations(Hold down multiple buttons at once for a different interaction). I then created an inherited interactor (What gives you the ability to grab objects in VR) and setup the ability to hook directly into the hands events. This has multiple benefits
+1) You only control the object you have grabbed
+2) You can have multiple functions running on the same object without being hard coded
+3) This is practically a developer tool and is plug and play which drastically speeds up development
+4) Can be imported into other people's projects with minimal setup
+
+   
+<img src="Images/vr 1.png" alt="photo of a quest 3 controller" width="300" />
+
+<img src="Images/vr 2.png" alt="photo of a quest 3 controller" width="300" />
 
 
 
