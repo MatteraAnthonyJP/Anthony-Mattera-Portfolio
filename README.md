@@ -123,6 +123,10 @@ Play the Game: [Download Drawing The Night Sky](https://github.com/MatteraAnthon
 
 ## Gears AR/Mobile Game:
 
+### Further context regarding project
+This version of the project actually started as a recreation of a college project i made that was rebuilt from the ground up to improve the gameplay, Latency, and Overall Visuals.
+<img src="Images/oldGears.png" alt="Image of the original Design of the Game" width="300" />
+
 ### Problem 1) Translation from Flat/AR
 One of the main features was the ability to take the entire game board and toss it directly into AR space.
 
@@ -133,19 +137,20 @@ One of the first things I did was have the actual Object rotate Towards the play
 To make touch placement feel natural relative to the user, I kept a grid oriented towards the player camera using Object.RotateTowards with a slight visual offset. It was a simple trick, but it made interacting in physical space easier and more responsive. On top of that in order to interact at all. I placed an invisible object placed directly behind the grid and strechting out far past the view of the screen in order to make placing the object less tedious.
 
 
-### Further context regarding project
-This version of the project actually started as a recreation of a college project i made that was rebuilt from the ground up to improve the gameplay, Latency, and Overall Visuals.
-<img src="Images/oldGears.png" alt="Image of the original Design of the Game" width="300" />
-
-
 ### Problem 2) The Rewrite
 This problem is a bit more complicated on face value so I'm going to explain it here
 At some point you are going to encounter a situation that would be physically impossible. Mainly a gear rotating and touching another gear that is turning the same direction. Now this may sound confusing at first, but there are exceptions built into the base game already. Mainly pieces that are physically connected using the black belt type connection shown in the demo. In the original version this would have all sorts of issues and in fact only checked its adjacent neighbors. It turned the game into more of a brick breaker type of game than the puzzle game it is now. 
 
-### Solution 2)
-When it came time to deal with impossible scenarios. I didn't have very many options. I originally decided to only break pieces that broke logic, but that would cause the tile board to fill up way too fast eventually  breaking the game loop. Eventually I settled on designing a Breadth First Search Algorithm that queued up each individual piece of a gear set. While also keeping track of a alternating pattern among the Gears in order to determine which piece would be breaking logic. This actually became the main point of the game unlike the original which was to just make the randomly spawning gear turn in the appropriate direction. Eventually I even added a tracker into the BFS that kept track of the path back to the original starting gear.  Which allowed for me to create massive chains of breaking gears in a satisfying pattern tracing back all the way to the main spinning gear, and also a potential consequence if you make a wrong move. In a sense I turned my biggest problem into the main feature of the game.
 
-<img src="Images/gears.gif" alt="Short GIF of the game running the BFS Algo" width="300" />
+### Solution 2)
+
+<img src="Images/gears.gif" alt="Short GIF of the game running the BFS Algo" align="right" width="350" />
+
+When it came time to deal with impossible scenarios. I didn't have very many options. I originally decided to only break pieces that broke logic, but that would cause the tile board to fill up way too fast eventually  breaking the game loop. Eventually I settled on designing a Breadth First Search Algorithm that queued up each individual piece of a gear set. While also keeping track of a alternating pattern among the Gears in order to determine which piece would be breaking logic. 
+
+This actually became the main point of the game unlike the original which was to just make the randomly spawning gear turn in the appropriate direction. Eventually I even added a tracker into the BFS that kept track of the path back to the original starting gear.  Which allowed for me to create massive chains of breaking gears in a satisfying pattern tracing back all the way to the main spinning gear, and also a potential consequence if you make a wrong move. In a sense I turned my biggest problem into the main feature of the game.
+
+<br clear="right" />
 
 Another Link to the Full video to the demo: https://www.youtube.com/watch?v=sFGd83fBjbc
 
