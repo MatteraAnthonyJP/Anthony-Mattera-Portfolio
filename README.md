@@ -1,6 +1,6 @@
 # Anthony Mattera - Game Developer / Technical Designer
 I am a Game Developer specializing in Unity, focusing on technical complex projects such as VR/AR. I enjoy creating projects that stand out as unique compared to current market offerings. I’m passionate about collaborating with others and pushing the boundaries of game development into innovative and captivating experiences.
----
+----
 
 If you would like to see jump straight to some of the problems and solutions I've encountered during projects you can check **[here](#problems-solved-during-projects)**. or conversely you can just scroll down 
 
@@ -136,6 +136,7 @@ The basic setup was straightforward. Placement was handled by dropping the board
 One of the first things I did was have the actual Object rotate Towards the player when in AR Space. This allows you to always interact with the game 
 To make touch placement feel natural relative to the user, I kept a grid oriented towards the player camera using Object.RotateTowards with a slight visual offset. It was a simple trick, but it made interacting in physical space easier and more responsive. On top of that in order to interact at all. I placed an invisible object placed directly behind the grid and strechting out far past the view of the screen in order to make placing the object less tedious.
 
+---
 
 ### Problem 2) The Rewrite
 This problem is a bit more complicated on face value so I'm going to explain it here
@@ -152,13 +153,15 @@ This actually became the main point of the game unlike the original which was to
 
 <br clear="right" />
 
-Another Link to the Full video to the demo: https://www.youtube.com/watch?v=sFGd83fBjbc
+Another Link to the Full video of the demo: https://www.youtube.com/watch?v=sFGd83fBjbc
 
+---
 
 ## VR Blacksmithing Game
 
 Before jumping into the massive amount of things I want to talk about I just want to say this is the project I'm most proud of. There's a lot of complex work that went into it.
 
+---
 ### Problem 1) Mesh Deformation Strategies
 So This Project was actually something I have had planned out and just didn't find the time till recently to make, but one of the first issues I encountered was with the idea. I want to make a blacksmithing, but how can I do that without having massive calculations that tank performance?
 
@@ -176,7 +179,7 @@ Advantages of this approach
 4) Its Lightweight meshes meaning physics calculations can be super efficient compared to others.
 5) This also allows me to save and do changes mid gameplay. Allowing for a future system I'd like to implement. That is both highly compatible and built on top of my current work.
 
-   
+---
 ### Problem 2) VR Controller Buttons
 <img src="Images/vr con.png" alt="photo of a quest 3 controller" width="300" align="right" />
 
@@ -200,9 +203,12 @@ Some images showcasing the plug and play nature of it in unity
 <p align="left" style="display: flex; justify-content: center; gap: 10px;">
 <img src="Images/vr2.png" alt="photo of a quest 3 controller" width="25%" />
  <img src="Images/VR 1.png" alt="photo of a quest 3 controller" width="40%" />
+
 </p>
 
+**Another Link to the Full video of the tech demo: https://www.youtube.com/watch?v=7_O5xNfPPn0**
 
+---
 
 
 
