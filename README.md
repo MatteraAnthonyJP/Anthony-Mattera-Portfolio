@@ -4,7 +4,7 @@ I am a Game Developer specializing in Unity, focusing on AR/VR games. I enjoy cr
 
 ## Publicly Available Projects
 ### AR Puzzle Game: GEARS
-A mobile + AR hybrid game inspired by Tetris, where the goal is to rotate gears into a "stuck gear" on the board to break it.
+A mobile + AR hybrid game partially inspired by Tetris, where the goal is to rotate gears into a "stuck gear" on the board to break it.
 
 **Role in Development**: Designer and Developer-
 Gameplay, UI, AR Foundation
@@ -12,31 +12,8 @@ Gameplay, UI, AR Foundation
 **Note:** Solo project
 
 **In-Depth Description of role**
-Developed from start to finish, this mobile AR hybrid game includes a save/load system, custom shaders, and an experience that can adapt between augmented reality and traditional flat-screen modes during gameplay
+Developed from start to finish, this mobile AR hybrid game includes a save/load system, custom Shaders, and an experience that can adapt between augmented reality and traditional flat-screen modes during gameplay
 
-Problem 1)Translation from Flat/AR
-One of the main features was taking the entire game board and tossing it directly into AR space.
-
-The basic setup was straightforward. Placement was handled by dropping the board onto whatever surface AR Foundation detected, and scaling was just a simple multiplier during the mode transition. The real challenge was actually controlling the game once it was there.
-
-Before I get Started On Explaining my solution to that. This started as a college project where I was the only solo developer—everyone else worked in teams of 3 or 4. It just happened this way; sometimes people drop out. Despite that, mine was the only project that implemented actual spatial interaction in AR. Most groups just dropped a static 3D model on a table and used standard UI buttons or gyro controls. In my build, you actually drag and drop pieces directly within the 3D space.
-
-The Solution:
-One of the first things I did was have the actual Object rotate Towards the player when in AR Space. This allows you to always interact with the game 
-To make touch placement feel natural relative to the user, I kept the grid oriented towards the player camera using Object.RotateTowards with a slight visual offset. It was a simple trick, but it made interacting in physical space easier and more responsive.
-
-Problem 2)The Rewrite:
-This version of the project actually started as a recreation of a college project i made that was rebuilt from the ground up to improve the gameplay, Latency, and Overall Visuals.
-<img src="Images/oldGears.png" alt="Image of the original Design of the Game" width="300" />
-
-The Actual Problem:
-At some point you are going to encounter a situation that would be physically impossible. Mainly a gear rotating and touching another gear that is turning the same direction. Now this may sound confusing at first, but there are exceptions built into the base game already. Mainly pieces that are physically connected using the black belt type connection shown in the demo. In the original version this would have all sorts of issues and in fact only checked its adjacent neighbors. It turned the game into more of a brick breaker type of game than the puzzle game it is now. 
-
-The Solution
-When it came time to deal with impossible scenarios. I didn't have very many options. I originally decided to only break pieces that broke logic, but that would cause the tile board to fill up way too fast eventually  breaking the game loop. Eventually I settled on designing a Breadth First Search Algorithm that queued up each individual piece of a gear set. While also keeping track of a alternating pattern among the Gears in order to determine which piece would be breaking logic. This actually became the main point of the game unlike the original which was to just make the randomly spawning gear turn in the appropriate direction. Eventually I even added a tracker into the BFS that kept track of the path back to the original starting gear.  Which allowed for me to create massive chains of breaking gears in a satisfying pattern tracing back all the way to the main spinning gear, and also a potential consequence if you make a wrong move. In a sense I turned my biggest problem into the main feature of the game.
-
-
-<img src="Images/o.gif" alt="Short GIF of the game running the BFS Algo" width="300" />
 
 **Tools Used**
 Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
@@ -128,5 +105,55 @@ A Video of the Demo can be seen Below
 **Tools Used**
 
 Unity, C#, XR Interaction Toolkit, Shader Graph
+
+
+
+
+
+
+
+
+
+Problems Solved During Projects:
+
+Gears:
+
+I originally had 8 weeks to work on the original version as this was a college project. you will see an image of the final product from that however, I went back and completely redesigned everything from the ground up to make the experience more fleshed out and improved overall
+
+Problem 1)Translation from Flat/AR
+One of the main features was the ability to take the entire game board and toss it directly into AR space.
+
+The basic setup was straightforward. Placement was handled by dropping the board onto whatever surface AR Foundation detected, and scaling was just a simple multiplier during the mode transition. The real challenge was actually controlling the game once it was there. 
+
+The Solution:
+One of the first things I did was have the actual Object rotate Towards the player when in AR Space. This allows you to always interact with the game 
+To make touch placement feel natural relative to the user, I kept a grid oriented towards the player camera using Object.RotateTowards with a slight visual offset. It was a simple trick, but it made interacting in physical space easier and more responsive. On top of that in order to interact at all. I placed an invisible object placed directly behind the grid and strechting out far past the view of the screen in order to make placing the object less tedious.
+
+Problem 2)The Rewrite:
+This version of the project actually started as a recreation of a college project i made that was rebuilt from the ground up to improve the gameplay, Latency, and Overall Visuals.
+<img src="Images/oldGears.png" alt="Image of the original Design of the Game" width="300" />
+
+The Actual Problem:
+At some point you are going to encounter a situation that would be physically impossible. Mainly a gear rotating and touching another gear that is turning the same direction. Now this may sound confusing at first, but there are exceptions built into the base game already. Mainly pieces that are physically connected using the black belt type connection shown in the demo. In the original version this would have all sorts of issues and in fact only checked its adjacent neighbors. It turned the game into more of a brick breaker type of game than the puzzle game it is now. 
+
+The Solution
+When it came time to deal with impossible scenarios. I didn't have very many options. I originally decided to only break pieces that broke logic, but that would cause the tile board to fill up way too fast eventually  breaking the game loop. Eventually I settled on designing a Breadth First Search Algorithm that queued up each individual piece of a gear set. While also keeping track of a alternating pattern among the Gears in order to determine which piece would be breaking logic. This actually became the main point of the game unlike the original which was to just make the randomly spawning gear turn in the appropriate direction. Eventually I even added a tracker into the BFS that kept track of the path back to the original starting gear.  Which allowed for me to create massive chains of breaking gears in a satisfying pattern tracing back all the way to the main spinning gear, and also a potential consequence if you make a wrong move. In a sense I turned my biggest problem into the main feature of the game.
+
+<img src="Images/o.gif" alt="Short GIF of the game running the BFS Algo" width="300" />
+
+Another Link to the demo: 
+
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/sFGd83fBjbc" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
+
+
+[![Watch the video](https://img.youtube.com/vi/sFGd83fBjbc/hqdefault.jpg)](https://www.youtube.com/watch?v=sFGd83fBjbc)
 
 
