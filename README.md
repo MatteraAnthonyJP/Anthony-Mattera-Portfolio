@@ -1,14 +1,14 @@
 # Anthony Mattera - Game Developer / Technical Designer
-I am a Game Developer specializing in Unity, focusing on AR/VR games. I enjoy creating projects that stand out as unique compared to current market offerings. I’m passionate about collaborating with others and pushing the boundaries of game development into innovative and captivating experiences.
+I am a Game Developer specializing in Unity, focusing on technical complex projects such as VR/AR. I enjoy creating projects that stand out as unique compared to current market offerings. I’m passionate about collaborating with others and pushing the boundaries of game development into innovative and captivating experiences.
 ---
 
-If you would like to see some of the problems and solutions I've encountered during this project you can check [here](#problems-solved-during-projects). or conversely you can just scroll down 
+If you would like to see jump straight to some of the problems and solutions I've encountered during projects you can check [here](#problems-solved-during-projects). or conversely you can just scroll down 
 
 ## AR Puzzle Game: GEARS
 A mobile + AR hybrid game partially inspired by Tetris, where the goal is to rotate gears into a "stuck gear" on the board to break it.
 
 **Role in Development**: Designer and Developer-
-Gameplay, UI, AR Foundation
+Gameplay, UI, AR Foundation, 3D Modeling, Shaders
 
 **Note:** Solo project
 
@@ -133,12 +133,15 @@ Advantages of this approach
 
    
 ### Problem 2) VR Controller Buttons
+<img src="Images/vr con.png" alt="photo of a quest 3 controller" width="300" align="right" />
+
 So this problem stems from how The XR toolkit (Unity's VR Solution) Is built. Its most likely easiest to explain after showing a picture of what a VR controller usually looks like button wise 
 
-<img src="Images/vr con.png" alt="photo of a quest 3 controller" width="300" />
 
 
 I want you to mainly focus on the X/Y buttons. So heres what is actually a problem. When you make something for VR opposed to other mediums you tend to need alot more interactions entirely dependent on the object you have held in your hand. The easiest example of such is a gun. First of all if you aren't directly holding a gun you wouldn't want to have control over a gun, but at the same time when you are holding it  You might have a trigger, but you could also have buttons like a safety or a magazine release. Unity's XR toolkit doesn't have a native way to give interactions to those Extra buttons IE X/Y built into it. So in a sense out of box theirs no way to make object dependent controls for these non Trigger based buttons
+
+<br clear="right" />
 
 ### Solution 2)
 
@@ -148,11 +151,11 @@ This solution was highly straight forward actually. I created an event manager f
 3) This is practically a developer tool and is plug and play which drastically speeds up development
 4) Can be imported into other people's projects with minimal setup
 
-   
-<img src="Images/vr 1.png" alt="photo of a quest 3 controller" width="300" />
-
-<img src="Images/vr 2.png" alt="photo of a quest 3 controller" width="300" />
-
+Some images showcasing the plug and play nature of it in unity
+<p align="left" style="display: flex; justify-content: center; gap: 10px;">
+<img src="Images/vr2.png" alt="photo of a quest 3 controller" width="25%" />
+ <img src="Images/VR 1.png" alt="photo of a quest 3 controller" width="40%" />
+</p>
 
 
 
