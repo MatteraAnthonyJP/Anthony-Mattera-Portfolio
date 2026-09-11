@@ -187,7 +187,7 @@ Advantages of this approach
 
 ---
 ### Problem 2) VR Controller Buttons
-<img src="Images/vr con.png" alt="photo of a quest 3 controller" width="300" align="right" />
+<img src="Images/vr con.png" alt="photo of a quest 3 controller" width="300" align="left" />
 
 So this problem stems from how The XR toolkit (Unity's VR Solution) Is built. Its most likely easiest to explain after showing a picture of what a VR controller usually looks like button wise 
 
@@ -206,9 +206,9 @@ This solution was highly straight forward actually. I created an event manager f
 4) Can be imported into other people's projects with minimal setup
 
 Some images showcasing the plug and play nature of it in unity
-<p align="left" style="display: flex; justify-content: center; gap: 10px;">
-<img src="Images/vr2.png" alt="photo of a quest 3 controller" width="25%" />
- <img src="Images/VR 1.png" alt="photo of a quest 3 controller" width="40%" />
+<p align="center" style="display: flex; justify-content: center; gap: 10px;">
+<img src="Images/vr2.png" alt="photo of plug and play nature" width="25%" />
+ <img src="Images/VR 1.png" alt="photo of plug and play nature" width="40%" />
 
 </p>
 
@@ -226,6 +226,7 @@ So a tiny bit of context for this project before I get started this was a group 
 For this project the group was given nearly free reign of what we were allowed to do. We had only 2 requirements. It must allow you to draw real constellations, and it must be within a level of accuracy. So it should line up decently well with the actual night sky
 
 ### Solution 1) 
+<img src="Images/night Sky.gif" alt="gif of the game" width="500" align="right" />
 
 There were a few attempts to make this project. originally we came up with a map of the constellations projected onto a sphere that envelops the player. This had obvious downsides being that the scale looked off, and interactions were a nightmare. So I eventually went back and looked into something called the Yale Bright Star Catalogue which is a collection of visible stars. This is perfect since all constellation stars are considered bright stars So I took a binary file from Yale's own website and plugged in that data in to give a basic location, name, and vector position from the location. This allowed up to make a full visible map. I then cross referenced every star from the constellations we had picked in order to piece together the gameplay for accuracy
 
