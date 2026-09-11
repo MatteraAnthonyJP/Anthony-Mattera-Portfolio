@@ -123,9 +123,10 @@ Play the Game: [Download Drawing The Night Sky](https://github.com/MatteraAnthon
 
 ## Gears AR/Mobile Game:
 
+<img src="Images/OldGears.jpg" alt="Image of the original Design of the Game" align="left" width="250" />
+
 ### Further context regarding project
 This version of the project actually started as a recreation of a college project i made that was rebuilt from the ground up to improve the gameplay, Latency, and Overall Visuals.
-<img src="Images/oldGears.png" alt="Image of the original Design of the Game" width="300" />
 
 ### Problem 1) Translation from Flat/AR
 One of the main features was the ability to take the entire game board and toss it directly into AR space.
@@ -135,6 +136,9 @@ The basic setup was straightforward. Placement was handled by dropping the board
 ### Solution 1)
 One of the first things I did was have the actual Object rotate Towards the player when in AR Space. This allows you to always interact with the game 
 To make touch placement feel natural relative to the user, I kept a grid oriented towards the player camera using Object.RotateTowards with a slight visual offset. It was a simple trick, but it made interacting in physical space easier and more responsive. On top of that in order to interact at all. I placed an invisible object placed directly behind the grid and stretching out far past the view of the screen in order to make placing the object less tedious.
+
+
+<br clear="left" />
 
 ---
 
@@ -163,9 +167,11 @@ Before jumping into the massive amount of things I want to talk about I just wan
 
 ---
 ### Problem 1) Mesh Deformation Strategies
+
 So This Project was actually something I have had planned out and just didn't find the time till recently to make, but one of the first issues I encountered was with the idea. I want to make a blacksmithing, but how can I do that without having massive calculations that tank performance?
 
-### Solution 1) 
+### Solution 1)
+<img src="Images/swordplay.gif" alt="Short GIF of the game running the BFS Algo" align="right" width="45%" />
 What Ive seen in the field is a large amount of designs that have tradeoffs and honestly they usually hurt the end user and the capabilities of the final product more than they are worth. So lets talk first about what I **didn't do**. 
 1) I didn't deform a mesh with a large amount of pre-made extra vertices. This would tank performance make it very difficult to do physics calculations, and guess what it would make most of the mesh data go to waste. Not to mention in VR this is very difficult to Make fun and its too complex for most people to enjoy.
 2) I didn't make the deform purely visual using bump maps. This would be better for the performance, but if the ultimate goal was to have the output be usable in physics simulations this would be terrible
