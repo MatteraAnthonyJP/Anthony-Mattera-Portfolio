@@ -23,9 +23,8 @@ Developed from start to finish, this mobile AR hybrid game includes a save/load 
 **Tools Used**
 Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
 
-Play the Game: [Download GEARS](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Gears)
+Play the Game: [Download GEARS APK](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Gears)
 
-***File is an APK***
 
 </p>
     </td>
@@ -60,11 +59,10 @@ Developed a VR tech demo
 * A custom Shop system for a full gameplay loop
 * As well as basic VR interactions including holsters, grabs, dials, levers, and locomotion mechanics.
 
-**Demo:** For right now demo has to be individually requested
-
 **Tools Used**
-
 Unity, C#, XR Interaction Toolkit, Shader Graph
+
+**Demo:** For right now demo has to be individually requested
 
 </p>
     </td>
@@ -92,19 +90,11 @@ Unity, C#, XR Interaction Toolkit, Shader Graph
 **In-Depth Description of role**
 Responsible for loading star data from a publicly available binary file, implementing the gameplay functionality for connecting stars, and manually validating all connections to accurately form constellations. 
 
-**Demo Video**
-
-
-***File is zipped .exe***
-
-
 **Tools Used**
 Unity, C#, json reading
 
 
-Unity, C#, XR Interaction Toolkit, Shader Graph
-
-Play the Game: [Download Drawing The Night Sky](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Drawing_The_Night_Sky)
+Play the Game: [Download Drawing The Night Sky EXE](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Drawing_The_Night_Sky)
 
 </p>
     </td>
@@ -218,7 +208,7 @@ Some images showcasing the plug and play nature of it in unity
 
 ## Drawing the Night Sky
 
-So a tiny bit of context for this project before I get started this was a group capstone project for my university. This was a 2 semester long project, but unfortunately i was only a part of it during the first semester meaning i had little to no input on the eventual polish of the project. However, my work specifically the constellation mapping was entirely my own and not changed since my departure.
+My main role in this project was the backed initial work that went into actually making the game "function" My role regarding the visuals was extremely limited
 
 ---
 ### Problem 1) Showcasing Constellations
