@@ -134,7 +134,7 @@ The basic setup was straightforward. Placement was handled by dropping the board
 
 ### Solution 1)
 One of the first things I did was have the actual Object rotate Towards the player when in AR Space. This allows you to always interact with the game 
-To make touch placement feel natural relative to the user, I kept a grid oriented towards the player camera using Object.RotateTowards with a slight visual offset. It was a simple trick, but it made interacting in physical space easier and more responsive. On top of that in order to interact at all. I placed an invisible object placed directly behind the grid and strechting out far past the view of the screen in order to make placing the object less tedious.
+To make touch placement feel natural relative to the user, I kept a grid oriented towards the player camera using Object.RotateTowards with a slight visual offset. It was a simple trick, but it made interacting in physical space easier and more responsive. On top of that in order to interact at all. I placed an invisible object placed directly behind the grid and stretching out far past the view of the screen in order to make placing the object less tedious.
 
 ---
 
@@ -187,7 +187,7 @@ So this problem stems from how The XR toolkit (Unity's VR Solution) Is built. It
 
 
 
-I want you to mainly focus on the X/Y buttons. So heres what is actually a problem. When you make something for VR opposed to other mediums you tend to need alot more interactions entirely dependent on the object you have held in your hand. The easiest example of such is a gun. First of all if you aren't directly holding a gun you wouldn't want to have control over a gun, but at the same time when you are holding it  You might have a trigger, but you could also have buttons like a safety or a magazine release. Unity's XR toolkit doesn't have a native way to give interactions to those Extra buttons IE X/Y built into it. So in a sense out of box theirs no way to make object dependent controls for these non Trigger based buttons
+I want you to mainly focus on the X/Y buttons. So here's what is actually a problem. When you make something for VR opposed to other mediums you tend to need alot more interactions entirely dependent on the object you have held in your hand. The easiest example of such is a gun. First of all if you aren't directly holding a gun you wouldn't want to have control over a gun, but at the same time when you are holding it  You might have a trigger, but you could also have buttons like a safety or a magazine release. Unity's XR toolkit doesn't have a native way to give interactions to those Extra buttons IE X/Y built into it. So in a sense out of box theirs no way to make object dependent controls for these non Trigger based buttons
 
 <br clear="right" />
 
@@ -209,6 +209,19 @@ Some images showcasing the plug and play nature of it in unity
 **Another Link to the Full video of the tech demo: https://www.youtube.com/watch?v=7_O5xNfPPn0**
 
 ---
+
+## Drawing the Night Sky
+
+So a tiny bit of context for this project before I get started this was a group capstone project for my university. This was a 2 semester long project, but unfortunately i was only a part of it during the first semester meaning i had little to no input on the eventual polish of the project. However, my work specifically the constellation mapping was entirely my own and not changed since my departure.
+
+---
+### Problem 1) Showcasing Constellations
+
+For this project the group was given nearly free reign of what we were allowed to do. We had only 2 requirements. It must allow you to draw real constellations, and it must be within a level of accuracy. So it should line up decently well with the actual night sky
+
+### Solution 1) 
+
+There were a few attempts to make this project. originally we came up with a map of the constellations projected onto a sphere that envelops the player. This had obvious downsides being that the scale looked off, and interactions were a nightmare. So I eventually went back and looked into something called the Yale Bright Star Catalogue which is a collection of visible stars. This is perfect since all constellation stars are considered bright stars So I took a binary file from Yale's own website and plugged in that data in to give a basic location, name, and vector position from the location. This allowed up to make a full visible map. I then cross referenced every star from the constellations we had picked in order to piece together the gameplay for accuracy
 
 
 
