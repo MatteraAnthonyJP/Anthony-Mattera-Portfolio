@@ -5,7 +5,10 @@ I am a Game Developer specializing in Unity, focusing on technical complex proje
 If you would like to see jump straight to some of the problems and solutions I've encountered during projects you can check [here](#problems-solved-during-projects). or conversely you can just scroll down 
 
 ## AR Puzzle Game: GEARS
-A mobile + AR hybrid game partially inspired by Tetris, where the goal is to rotate gears into a "stuck gear" on the board to break it.
+<table>
+<tr>
+    <td valign="top" width="60%">
+      <p>       A mobile + AR hybrid game partially inspired by Tetris, where the goal is to rotate gears into a "stuck gear" on the board to break it.
 
 **Role in Development**: Designer and Developer-
 Gameplay, UI, AR Foundation, 3D Modeling, Shaders
@@ -19,13 +22,22 @@ Developed from start to finish, this mobile AR hybrid game includes a save/load 
 **Tools Used**
 Unity, C#, Blender (for gear modeling), Shader Graph, AR Foundation
 
-**Demo Video**
-
-[![Watch the video](https://img.youtube.com/vi/sFGd83fBjbc/hqdefault.jpg)](https://www.youtube.com/watch?v=sFGd83fBjbc)
-
 Play the Game: [Download GEARS](https://github.com/MatteraAnthonyJP/Anthony-Mattera-Portfolio/releases/tag/Gears)
 
 ***File is an APK***
+
+</p>
+    </td>
+    <td align="center" valign="top" width="40%">
+      <p><b>**Demo Video**</b></p>
+      <a href="https://www.youtube.com/watch?v=sFGd83fBjbc">
+        <img src="https://img.youtube.com/vi/sFGd83fBjbc/hqdefault.jpg" alt="Video Thumbnail" width="100%">
+      </a>
+    </td>
+  </tr>
+</table>
+
+
 
 ## Virtual Reality Blacksmithing Tech Demo
 A VR tech Demo made to showcase designing meshes in real-time. 
