@@ -124,13 +124,11 @@ Play the Game: [Download Drawing The Night Sky EXE](https://github.com/MatteraAn
 This version of the project actually started as a recreation of a college project i made that was rebuilt from the ground up to improve the gameplay, Latency, and Overall Visuals.
 
 ### Problem 1) Translation from Flat/AR
-One of the main features was the ability to take the entire game board and toss it directly into AR space.
-
-The basic setup was straightforward. Placement was handled by dropping the board onto whatever surface AR Foundation detected, and scaling was just a simple multiplier during the mode transition. The real challenge was actually controlling the game once it was there. 
+Taking a flat puzzle board and dropping it into 3D AR space introduced control issues. Placement was easy—dropping the board onto AR Foundation surfaces and scaling it—but controlling the game on a flat touch screen while moving around physical space felt unresponsive.
 
 ### Solution 1)
-One of the first things I did was have the actual Object rotate Towards the player when in AR Space. This allows you to always interact with the game 
-To make touch placement feel natural relative to the user, I kept a grid oriented towards the player camera using Object.RotateTowards with a slight visual offset. It was a simple trick, but it made interacting in physical space easier and more responsive. On top of that in order to interact at all. I placed an invisible object placed directly behind the grid and stretching out far past the view of the screen in order to make placing the object less tedious.
+Dynamic Alignment: Programmed the board to rotate toward the player's camera using Object.RotateTowards with a slight visual offset, keeping interactions natural regardless of player perspective.
+Invisible Input Plane: Placed an invisible raycast target directly behind the grid stretching past the screen boundary. This drastically reduced touch miss-rates when placing objects rapidly in 3D space.
 
 
 <br clear="left" />
@@ -138,17 +136,20 @@ To make touch placement feel natural relative to the user, I kept a grid oriente
 ---
 
 ### Problem 2) The Rewrite
-This problem is a bit more complicated on face value so I'm going to explain it here
-At some point you are going to encounter a situation that would be physically impossible. Mainly a gear rotating and touching another gear that is turning the same direction. Now this may sound confusing at first, but there are exceptions built into the base game already. Mainly pieces that are physically connected using the black belt type connection shown in the demo. In the original version this would have all sorts of issues and in fact only checked its adjacent neighbors. It turned the game into more of a brick breaker type of game than the puzzle game it is now. 
+In gear mechanics, you inevitably hit physically impossible scenarios—like two adjacent gears trying to rotate into each other in the same direction. Originally, the code only checked direct adjacent neighbors, turning the experience into more of a brick-breaker than a true puzzle game.
 
 
 ### Solution 2)
 
 <img src="Images/gears.gif" alt="Short GIF of the game running the BFS Algo" align="right" width="350" />
 
-When it came time to deal with impossible scenarios. I didn't have very many options. I originally decided to only break pieces that broke logic, but that would cause the tile board to fill up way too fast eventually  breaking the game loop. Eventually I settled on designing a Breadth First Search Algorithm that queued up each individual piece of a gear set. While also keeping track of a alternating pattern among the Gears in order to determine which piece would be breaking logic. 
+Breaking conflicting pieces outright filled up the tile board too fast and broke the gameplay loop. Instead, I built a Breadth-First Search (BFS) Algorithm to evaluate gear networks on placement:
 
-This actually became the main point of the game unlike the original which was to just make the randomly spawning gear turn in the appropriate direction. Eventually I even added a tracker into the BFS that kept track of the path back to the original starting gear.  Which allowed for me to create massive chains of breaking gears in a satisfying pattern tracing back all the way to the main spinning gear, and also a potential consequence if you make a wrong move. In a sense I turned my biggest problem into the main feature of the game.
+- Pattern Tracking: Queued up every individual gear piece in a network while tracking alternating rotational directions to isolate the exact gear breaking physical logic.
+
+- Cascading Chains: Extended the BFS to calculate a returning path all the way back to the main origin gear.
+
+- Mechanic Pivot: Transformed the game's biggest systemic bug into its main feature—triggering satisfying, cascading destruction chains tracing back through the network whenever a wrong move is made.
 
 <br clear="right" />
 
@@ -158,21 +159,19 @@ Another Link to the Full video of the demo: https://www.youtube.com/watch?v=sFGd
 
 ## VR Blacksmithing Game
 
-Before jumping into the massive amount of things I want to talk about I just want to say this is the project I'm most proud of. There's a lot of complex work that went into it.
 
 ---
 ### Problem 1) Mesh Deformation Strategies
 
-So This Project was actually something I have had planned out and just didn't find the time till recently to make, but one of the first issues I encountered was with the idea. I want to make a blacksmithing, but how can I do that without having massive calculations that tank performance?
-
-### Solution 1)
-<img src="Images/swordplay.gif" alt="Short GIF of the game running the BFS Algo" align="right" width="45%" />
-In existing VR systems, dynamic deformation usually comes with heavy tradeoffs that ruin either performance or player agency. Here’s what I chose not to do and why:
+I wanted to build a blacksmithing system without running massive calculations that tank VR performance. Standard approaches have major tradeoffs:
 
 1) High-Poly Mesh Deformation: Wastes vertex data, tanks VR performance, and makes physics calculations far too expensive.
 2) Purely Visual Bump Mapping: Keeps performance high, but provides zero actual physical geometry for collision or physics simulations.
 3) Pre-Determined / "Fake" Deformation: Sacrifices player input and agency by forcing a predetermined visual output.
 
+
+### Solution 1)
+<img src="Images/swordplay.gif" alt="Short GIF of the game running the BFS Algo" align="right" width="45%" />
 I built a system where a flat surface acts as a dynamic cast for the weapon. The player directly defines midpoints, edge points, height, width, and material parameters to generate the mesh in real time.
 
 Why this works:
@@ -191,20 +190,30 @@ So this problem stems from how The XR toolkit (Unity's VR Solution) Is built. It
 
 
 
-I want you to mainly focus on the X/Y buttons. So here's what is actually a problem. When you make something for VR opposed to other mediums you tend to need alot more interactions entirely dependent on the object you have held in your hand. The easiest example of such is a gun. First of all if you aren't directly holding a gun you wouldn't want to have control over a gun, but at the same time when you are holding it  You might have a trigger, but you could also have buttons like a safety or a magazine release. Unity's XR toolkit doesn't have a native way to give interactions to those Extra buttons IE X/Y built into it. So in a sense out of box theirs no way to make object dependent controls for these non Trigger based buttons
+Unity’s XR Interaction Toolkit doesn't provide an out-of-the-box way to bind non-trigger buttons (like X/Y or A/B) to object-specific actions.
+
+When holding a tool or weapon in VR, you often need controls unique to that specific item—like a safety catch or a secondary action mode. Out of the box, auxiliary buttons remain tied to global inputs rather than the object held in your hand.
 
 <br clear="right" />
 
 ### Solution 2)
 
-This solution was highly straight forward actually. I created an event manager for each hand that was controlled based off predetermined buttons and button configurations(Hold down multiple buttons at once for a different interaction). I then created an inherited interactor (What gives you the ability to grab objects in VR) and setup the ability to hook directly into the hands events. This has multiple benefits
-1) You only control the object you have grabbed
-2) You can have multiple functions running on the same object without being hard coded
-3) This is practically a developer tool and is plug and play which drastically speeds up development
-4) Can be imported into other people's projects with minimal setup
+I built a custom, decoupled event system to dynamically route controller inputs based on what object the player is currently holding:
+
+- Hand Event Manager: Created an event manager for each hand tracking active button states and multi-button chord configurations (e.g., holding two buttons at once).
+
+- Custom Interactor: Built an extended interactor component that hooks directly into hand events, allowing held objects to subscribe to secondary button inputs on the fly.
+
+Why this works:
+
+- Contextual Control: Secondary buttons strictly control the held object without global input bleed.
+
+- Multi-Functionality: Single items can run multiple custom functions without hardcoding controls into the player character script.
+
+- Modular Developer Tool: The architecture operates as a plug-and-play module that can be dropped into future VR projects with minimal setup.
 
 Some images showcasing the plug and play nature of it in unity
-<p align="center" style="display: flex; justify-content: center; gap: 10px;">
+<p align="left" style="display: flex; justify-content: center; gap: 10px;">
 <img src="Images/vr2.png" alt="photo of plug and play nature" width="25%" />
  <img src="Images/VR 1.png" alt="photo of plug and play nature" width="40%" />
 
@@ -216,17 +225,20 @@ Some images showcasing the plug and play nature of it in unity
 
 ## Drawing the Night Sky
 
-My main role in this project was the backed initial work that went into actually making the game "function" My role regarding the visuals was extremely limited
+This was a two-semester capstone project. My work specifically centered on the constellation mapping system and star data integration, which remained the core backbone of the project.
 
 ---
 ### Problem 1) Showcasing Constellations
 
-For this project the group was given nearly free reign of what we were allowed to do. We had only 2 requirements. It must allow you to draw real constellations, and it must be within a level of accuracy. So it should line up decently well with the actual night sky
+The team needed to accurately map visible constellations so players could draw them in real-time. Early prototypes projected flat constellation textures onto a sphere surrounding the player, but the scale was heavily distorted and interactive targeting felt clumsy.
 
 ### Solution 1) 
 <img src="Images/night Sky.gif" alt="gif of the game" width="500" align="right" />
 
-There were a few attempts to make this project. originally we came up with a map of the constellations projected onto a sphere that envelops the player. This had obvious downsides being that the scale looked off, and interactions were a nightmare. So I eventually went back and looked into something called the Yale Bright Star Catalogue which is a collection of visible stars. This is perfect since all constellation stars are considered bright stars So I took a binary file from Yale's own website and plugged in that data in to give a basic location, name, and vector position from the location. This allowed up to make a full visible map. I then cross referenced every star from the constellations we had picked in order to piece together the gameplay for accuracy
+- Data Integration: Integrated the Yale Bright Star Catalogue (a dataset of visible stars) by parsing raw binary files directly from Yale's database.
 
+- Vector Calculation: Extracted coordinates, names, and spatial positions to render a 1:1 visible star map in Unity.
+
+- Data Validation: Cross-referenced catalog entry vectors against selected target constellations to build an precise coordinate-matching gameplay loop.
 
 
