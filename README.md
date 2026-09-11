@@ -17,7 +17,10 @@ Gameplay, UI, AR Foundation, 3D Modeling, Shaders
 **Note:** Solo project
 
 **In-Depth Description of role**
-Developed from start to finish, this mobile AR hybrid game includes a save/load system, custom Shaders, and an experience that can adapt between augmented reality and traditional flat-screen modes during gameplay
+Developed from start to finish, this mobile AR hybrid game includes a 
+- save/load system 
+- custom Shaders 
+- Ability to swap between AR/flat mobile mid gameplay
 
 
 **Tools Used**
@@ -88,7 +91,9 @@ Unity, C#, XR Interaction Toolkit, Shader Graph
 **Role in Development**: Data Validation, Gameplay logic.
 
 **In-Depth Description of role**
-Responsible for loading star data from a publicly available binary file, implementing the gameplay functionality for connecting stars, and manually validating all connections to accurately form constellations. 
+- loading star data from a publicly available binary file
+- implementing the gameplay functionality for connecting stars
+- validating all connections to accurately form constellations. 
 
 **Tools Used**
 Unity, C#, json reading
@@ -162,18 +167,21 @@ So This Project was actually something I have had planned out and just didn't fi
 
 ### Solution 1)
 <img src="Images/swordplay.gif" alt="Short GIF of the game running the BFS Algo" align="right" width="45%" />
-What Ive seen in the field is a large amount of designs that have tradeoffs and honestly they usually hurt the end user and the capabilities of the final product more than they are worth. So lets talk first about what I **didn't do**. 
-1) I didn't deform a mesh with a large amount of pre-made extra vertices. This would tank performance make it very difficult to do physics calculations, and guess what it would make most of the mesh data go to waste. Not to mention in VR this is very difficult to Make fun and its too complex for most people to enjoy.
-2) I didn't make the deform purely visual using bump maps. This would be better for the performance, but if the ultimate goal was to have the output be usable in physics simulations this would be terrible
-3) I didn't fake it. I didn't want the output to be per-determined meaning the user is just a passenger and doesn't have much input in the outcome
+In existing VR systems, dynamic deformation usually comes with heavy tradeoffs that ruin either performance or player agency. Here’s what I chose not to do and why:
 
-So what I Actually Did is Build a mesh using a flat surface acting as a cast for the weapon. allowing the user to point to and specify mid points,Edge Points, height, weight, width, and materials. 
-Advantages of this approach
-1) The User Gets to choose the shape
-2) Performance issues build up instead of down. You aren't forced to have 10,000 vertices. You start with 5 and work up towards that 10,000 ( not that you'd ever reach it)
-3) Beginner friendly. All it takes is moving some points and changing some dials and even a child could design something of their dreams.
-4) Its Lightweight meshes meaning physics calculations can be super efficient compared to others.
-5) This also allows me to save and do changes mid gameplay. Allowing for a future system I'd like to implement. That is both highly compatible and built on top of my current work.
+1) High-Poly Mesh Deformation: Wastes vertex data, tanks VR performance, and makes physics calculations far too expensive.
+2) Purely Visual Bump Mapping: Keeps performance high, but provides zero actual physical geometry for collision or physics simulations.
+3) Pre-Determined / "Fake" Deformation: Sacrifices player input and agency by forcing a predetermined visual output.
+
+I built a system where a flat surface acts as a dynamic cast for the weapon. The player directly defines midpoints, edge points, height, width, and material parameters to generate the mesh in real time.
+
+Why this works:
+
+1) Full Player Agency: Players get total control over designing the weapon's physical shape.
+
+2) Scalable Performance: Geometry starts at 5 vertices and scales up procedural-style only as needed, keeping physics lightweight and framerates stable.
+
+3) Runtime Flexibility: The lightweight mesh structure allows data to be modified or saved on the fly during gameplay.
 
 ---
 ### Problem 2) VR Controller Buttons
