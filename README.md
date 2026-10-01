@@ -2,7 +2,7 @@
 I am a Software & Systems Developer specializing in C#, system architecture, and interactive simulation environments (VR/AR). I focus on solving complex algorithmic challenges such as real-time data validation, state management, procedural mesh generation, and input event routing. Below are detailed technical post-mortems of system problems I’ve solved.
 ----
 
-If you would like to see jump straight to some of the problems and solutions I've encountered during projects you can check **[here](#problems-solved-during-projects)**. or conversely you can just scroll down 
+If you would like to jump straight to some of the problems and solutions I've encountered during projects you can check **[here](#problems-solved-during-projects)**. or conversely you can just scroll down 
 
 # Current Showcased Projects
 ## AR Puzzle Game: GEARS
